@@ -1,0 +1,28 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #151320;
+}
+div{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    background: conic-gradient(
+        #fd004c 20%,
+        #fe9000 20%,
+        #fe9000 40%,
+        #fff020 40%,
+        #fff020 60%,
+        #3edf4b 60%,
+        #3edf4b 80%,
+        #3363ff 80%
+    );
+}
