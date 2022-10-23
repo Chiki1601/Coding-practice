@@ -1,0 +1,43 @@
+.CarnivalEnv__booth {
+  border: 5px solid saddlebrown;
+  margin: 1rem;
+}
+
+.BottleRow {
+  background-color: #eef;
+  display: flex;
+  overflow: hidden;
+  padding: 1rem 0;
+  position: relative;
+}
+.BottleRow::after {
+  content: "";
+  background-color: #8c7f6e;
+  bottom: 0;
+  height: 20%;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.BottleRow__inner {
+  display: flex;
+  min-width: 300%;
+  position: relative;
+  z-index: 10;
+}
+
+.Bottle {
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+.Bottle:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.25s linear;
+}
+.Bottle__img {
+  height: 100%;
+}
