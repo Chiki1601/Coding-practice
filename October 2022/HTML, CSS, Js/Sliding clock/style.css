@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black");
+body {
+  background-color: #262626;
+  font-family: "Anton", sans-serif;
+}
+
+.time {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 50px;
+  width: 323px;
+  background-color: #fff;
+  padding: 0px 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+ul.numbers {
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+  transition: all ease 0.5s;
+  margin: 0px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+ul.numbers li {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 800;
+}
+ul.numbers.hoursFirst, ul.numbers.hoursLast {
+  background-color: #ff7468;
+  color: #422a2d;
+}
+ul.numbers.minutesFirst, ul.numbers.minutesLast {
+  background-color: #2198dd;
+  color: #fff;
+}
+ul.numbers.secondsFirst, ul.numbers.secondsLast {
+  background-color: #f2c941;
+  color: #212121;
+}
