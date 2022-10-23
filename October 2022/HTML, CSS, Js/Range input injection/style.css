@@ -1,0 +1,293 @@
+* {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #fcfcfc;
+  overflow: hidden;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+@media only screen and (min-width: 900px) and (min-height: 700px) {
+  body {
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+.bottle {
+  width: 200px;
+  height: 200px;
+  background: #c6e8e7;
+  position: relative;
+  border-radius: 0 0 20px 20px;
+  box-shadow: inset -10px 0 0 0 rgba(0, 0, 0, 0.2);
+  transform: rotate(90deg);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+@media only screen and (min-width: 900px) and (min-height: 700px) {
+  .bottle {
+    transform: rotate(0);
+  }
+}
+.bottle:before {
+  content: "";
+  display: block;
+  position: absolute;
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  background: #c6e8e7;
+  border-radius: 20px;
+  bottom: -58px;
+  left: 0;
+  right: 0;
+  transform: rotate(45deg);
+  box-shadow: inset -10px 0 0 0 rgba(0, 0, 0, 0.2);
+  z-index: -1;
+}
+.bottle:after {
+  content: "";
+  display: block;
+  position: absolute;
+  margin: auto;
+  width: 100px;
+  height: 80px;
+  bottom: -115px;
+  background: #c6e8e7;
+  left: 0;
+  right: 0;
+  box-shadow: inset -10px 0 0 0 rgba(0, 0, 0, 0.2);
+}
+.bottle .label {
+  position: absolute;
+  background: #252525;
+  width: 200px;
+  height: 160px;
+  box-shadow: inset -15px 0 0 0 rgba(0, 0, 0, 0.2), inset 0 -40px 0 0 black;
+  overflow: hidden;
+}
+.bottle .label svg {
+  position: absolute;
+  mix-blend-mode: exclusion;
+  opacity: 0.2;
+}
+.bottle .label:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  width: 15px;
+  border-radius: 8px;
+  height: calc(100% - 50px);
+  background: rgba(255, 255, 255, 0.2);
+}
+.bottle .label p {
+  width: 100%;
+  height: 120px;
+  line-height: 120px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.4rem;
+  margin: 0;
+  transform: rotate(180deg);
+}
+.bottle .cap {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  width: 120px;
+  height: 60px;
+  background: #43417b;
+  bottom: -150px;
+  border-radius: 10px;
+  z-index: 1;
+  box-shadow: inset -15px 0 0 0 #312f5a;
+}
+.bottle .cap:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  height: 50px;
+  width: 15px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.bottle .syringe {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  width: 200px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.4);
+  bottom: -400px;
+  border: 1px solid #a5b1c2;
+  box-shadow: inset 0 10px 0 0 rgba(0, 0, 0, 0.2);
+  transform: rotate(90deg);
+  z-index: 0;
+}
+.bottle .syringe:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  width: 5px;
+  height: 20px;
+  border-radius: 3px 3px 0 0;
+  z-index: 1;
+  box-shadow: 25px 0 0 0 rgba(0, 0, 0, 0.4), 50px 0 0 0 rgba(0, 0, 0, 0.4), 75px 0 0 0 rgba(0, 0, 0, 0.4), 100px 0 0 0 rgba(0, 0, 0, 0.4), 125px 0 0 0 rgba(0, 0, 0, 0.4), 150px 0 0 0 rgba(0, 0, 0, 0.4), 175px 0 0 0 rgba(0, 0, 0, 0.4);
+}
+.bottle .syringe:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 120px;
+  border: 1px solid #a5b1c2;
+  right: -7px;
+  top: -30px;
+  background: rgba(255, 255, 255, 0.4);
+}
+.bottle .syringe .needle {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  height: 8px;
+  left: -201px;
+  background: #b4becc;
+  box-shadow: inset 0 4px 0 0 #d3d9e1;
+}
+.bottle .syringe .needle:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 20px;
+  background: #57acc9;
+  bottom: -6px;
+  right: 0;
+  border-radius: 4px 0 0 4px;
+  box-shadow: inset 0 5px 0 0 rgba(0, 0, 0, 0.2);
+}
+.bottle .syringe input {
+  width: calc(100% + 10px);
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-appearance: none;
+  background: transparent;
+  box-shadow: inset 200px 0 0 0 rgba(255, 255, 255, 0.4);
+}
+.bottle .syringe input:focus {
+  outline: none;
+}
+.bottle .syringe input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  width: 10px;
+  height: 60px;
+  border-radius: 0 5px 5px 0;
+  position: relative;
+  z-index: 100;
+}
+.bottle .syringe .fluid {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #eb0c6b;
+  z-index: -1;
+  box-shadow: inset 0 10px 0 0 rgba(0, 0, 0, 0.2);
+}
+.bottle .syringe .fluid:before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -10px;
+  width: 10px;
+  bottom: 0;
+  height: 100%;
+  background: #43417b;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 210px 0 0 0 #a5b1c2;
+}
+.bottle .syringe .fluid:after {
+  content: "";
+  display: block;
+  position: absolute;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  height: 10px;
+  right: -210px;
+  background: #8797ad;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+a.dribbble {
+  text-align: center;
+  overflow: hidden;
+  z-index: 0;
+  transition: all 200ms cubic-bezier(0.25, 0.75, 0.5, 1);
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-top: 2px;
+  line-height: 44px;
+}
+a.dribbble path {
+  transition: all 250ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+a.dribbble:after {
+  content: "";
+  position: absolute;
+  transition: all 250ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  width: 0;
+  right: 0%;
+  bottom: 0;
+  height: 100%;
+  background: #ea4c89;
+  mix-blend-mode: darken;
+  z-index: -1;
+}
+a.dribbble:hover, a.dribbble.hover {
+  color: #a5b1c2;
+}
+a.dribbble:hover path, a.dribbble.hover path {
+  fill: #fff;
+}
+a.dribbble:hover:after, a.dribbble.hover:after {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
