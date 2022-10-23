@@ -1,0 +1,1 @@
+//I want to say thanks рони for his help and other people of site javascript.ru for their help.

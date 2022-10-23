@@ -1,0 +1,294 @@
+body{
+	background-color: black;
+}
+
+.braine{
+	position: relative;
+	width: 100%;
+	height: 700px;
+}
+#digital{
+	position: absolute;
+	left: 30%;
+	width: 600px;
+	height: 600px;
+	border-radius: 50%;
+    background: radial-gradient( rgba(15,149,235, 1) 25%,  rgba(0,0,0, 0.4) 70% );
+	
+}
+
+h1.loadingtext {
+  position: absolute;
+  bottom: 0%;
+  left: 33%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Nunito', sans-serif;
+  font-size: 4.6em;
+  color: transparent;
+  letter-spacing: 0.01em;
+}
+h1.loadingtext span {
+  text-shadow: 0 0 2px rgba(22, 22, 22, 0.9), 0 15px 25px rgba(0, 0, 0, 0.3), 0 -2px 3px rgba(0, 0, 0, 0.1), 0 -5px 10px rgba(22, 22, 22, 0.5), 0 5px 10px rgba(0, 0, 0, 0.3), 0 3px 4px rgba(22, 22, 22, 0.2), 0 0 20px rgba(22, 22, 22, 0.45);
+  -webkit-animation: letters 0.85s ease-in-out infinite alternate;
+  -moz-animation: letters 0.85s ease-in-out infinite alternate;
+  -ms-animation: letters 0.85s ease-in-out infinite alternate;
+  animation: letters 0.85s ease-in-out infinite alternate;
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay: 0;
+  animation-delay: 0;
+}
+h1.loadingtext span:nth-child(2) {
+  -webkit-animation-delay: 0.15s;
+  -moz-animation-delay: 0.15s;
+  -o-animation-delay: 0.15s;
+  animation-delay: 0.15s;
+}
+h1.loadingtext span:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -o-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+h1.loadingtext span:nth-child(4) {
+  -webkit-animation-delay: 0.45s;
+  -moz-animation-delay: 0.45s;
+  -o-animation-delay: 0.45s;
+  animation-delay: 0.45s;
+}
+h1.loadingtext span:nth-child(5) {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  -o-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+h1.loadingtext span:nth-child(6) {
+  -webkit-animation-delay: 0.75s;
+  -moz-animation-delay: 0.75s;
+  -o-animation-delay: 0.75s;
+  animation-delay: 0.75s;
+}
+h1.loadingtext span:nth-child(7) {
+  -webkit-animation-delay: 0.9s;
+  -moz-animation-delay: 0.9s;
+  -o-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}
+
+
+@keyframes letters {
+  to {
+    text-shadow: 0 0 2px rgba(204, 208, 212, 0.2), 0 0 3px rgba(0, 0, 0, 0.02), 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(255, 255, 255, 0), 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(255, 255, 255, 0), 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+@-moz-keyframes letters {
+  to {
+    text-shadow: 0 0 2px rgba(204, 208, 212, 0.2), 0 0 3px rgba(0, 0, 0, 0.02), 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(255, 255, 255, 0), 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(255, 255, 255, 0), 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+@-webkit-keyframes letters {
+  to {
+    text-shadow: 0 0 2px rgba(22, 22, 22, 0.2), 0 0 3px rgba(0, 0, 0, 0.02), 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+
+#pens a{
+  position: absolute;
+  bottom: 0%;
+  left: 20px;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5em;
+	width: 100%;
+  text-decoration: none;
+}
+
+
+
+.st0{fill:none;stroke:#5FBEFF;stroke-width:2;stroke-miterlimit:10;}
+	.st1{fill:url(#SVGID_1_);}
+	.st2{fill:url(#SVGID_2_);}
+	.st3{fill:url(#SVGID_3_);}
+	.st4{fill:url(#SVGID_4_);}
+	.st5{fill:url(#SVGID_5_);}
+	.st6{fill:url(#SVGID_6_);}
+	.st7{fill:url(#SVGID_7_);}
+	.st8{fill:url(#SVGID_8_);}
+	.st9{fill:url(#SVGID_9_);}
+	.st10{fill:url(#SVGID_10_);}
+	.st11{fill:url(#SVGID_11_);}
+	.st12{fill:url(#SVGID_12_);}
+	.st13{fill:url(#SVGID_13_);}
+	.st14{fill:url(#SVGID_14_);}
+	.st15{fill:url(#SVGID_15_);}
+	.st16{fill:url(#SVGID_16_);}
+	.st17{fill:url(#SVGID_17_);}
+	.st18{fill:url(#SVGID_18_);}
+	.st19{fill:url(#SVGID_19_);}
+	.st20{fill:url(#SVGID_20_);}
+	.st21{fill:url(#SVGID_21_);}
+	.st22{fill:url(#SVGID_22_);}
+	.st23{fill:url(#SVGID_23_);}
+	.st24{fill:url(#SVGID_24_);}
+	.st25{fill:url(#SVGID_25_);}
+	.st26{fill:url(#SVGID_26_);}
+	.st27{fill:url(#SVGID_27_);}
+	.st28{fill:url(#SVGID_28_);}
+	.st29{fill:url(#SVGID_29_);}
+	.st30{fill:url(#SVGID_30_);}
+	.st31{fill:url(#SVGID_31_);}
+	.st32{fill:url(#SVGID_32_);}
+	.st33{fill:url(#SVGID_33_);}
+	.st34{fill:url(#SVGID_34_);}
+	.st35{fill:url(#SVGID_35_);}
+	.st36{fill:url(#SVGID_36_);}
+	.st37{fill:url(#SVGID_37_);}
+	.st38{fill:url(#SVGID_38_);}
+	.st39{fill:url(#SVGID_39_);}
+	.st40{fill:url(#SVGID_40_);}
+	.st41{fill:url(#SVGID_41_);}
+	.st42{fill:url(#SVGID_42_);}
+	.st43{fill:url(#SVGID_43_);}
+	.st44{fill:url(#SVGID_44_);}
+	.st45{fill:url(#SVGID_45_);}
+	.st46{fill:url(#SVGID_46_);}
+	.st47{fill:url(#SVGID_47_);}
+	.st48{fill:url(#SVGID_48_);}
+	.st49{fill:url(#SVGID_49_);}
+	.st50{fill:url(#SVGID_50_);}
+	.st51{fill:url(#SVGID_51_);}
+	.st52{fill:url(#SVGID_52_);}
+	.st53{fill:url(#SVGID_53_);}
+	.st54{fill:url(#SVGID_54_);}
+	.st55{fill:url(#SVGID_55_);}
+	.st56{fill:url(#SVGID_56_);}
+	.st57{fill:url(#SVGID_57_);}
+	.st58{fill:url(#SVGID_58_);}
+	.st59{fill:url(#SVGID_59_);}
+	.st60{fill:url(#SVGID_60_);}
+	.st61{fill:url(#SVGID_61_);}
+	.st62{fill:url(#SVGID_62_);}
+	.st63{fill:url(#SVGID_63_);}
+	.st64{fill:url(#SVGID_64_);}
+	.st65{fill:url(#SVGID_65_);}
+	.st66{fill:url(#SVGID_66_);}
+	.st67{fill:url(#SVGID_67_);}
+	.st68{fill:url(#SVGID_68_);}
+	.st69{fill:url(#SVGID_69_);}
+	.st70{fill:url(#SVGID_70_);}
+	.st71{fill:url(#SVGID_71_);}
+	.st72{fill:url(#SVGID_72_);}
+	.st73{fill:url(#SVGID_73_);}
+	.st74{fill:url(#SVGID_74_);}
+	.st75{fill:url(#SVGID_75_);}
+	.st76{fill:url(#SVGID_76_);}
+	.st77{fill:url(#SVGID_77_);}
+	.st78{fill:url(#SVGID_78_);}
+	.st79{fill:url(#SVGID_79_);}
+	.st80{fill:url(#SVGID_80_);}
+	.st81{fill:url(#SVGID_81_);}
+	.st82{fill:url(#SVGID_82_);}
+	.st83{fill:url(#SVGID_83_);}
+	.st84{fill:url(#SVGID_84_);}
+	.st85{fill:url(#SVGID_85_);}
+	.st86{fill:url(#SVGID_86_);}
+	.st87{fill:url(#SVGID_87_);}
+	.st88{fill:url(#SVGID_88_);}
+	.st89{fill:url(#SVGID_89_);}
+	.st90{fill:url(#SVGID_90_);}
+	.st91{fill:url(#SVGID_91_);}
+	.st92{fill:url(#SVGID_92_);}
+	.st93{fill:url(#SVGID_93_);}
+	.st94{fill:url(#SVGID_94_);}
+	.st95{fill:url(#SVGID_95_);}
+	.st96{fill:url(#SVGID_96_);}
+	.st97{fill:url(#SVGID_97_);}
+	.st98{fill:url(#SVGID_98_);}
+	.st99{fill:url(#SVGID_99_);}
+	.st100{fill:url(#SVGID_100_);}
+	.st101{fill:url(#SVGID_101_);}
+	.st102{fill:url(#SVGID_102_);}
+	.st103{fill:url(#SVGID_103_);}
+	.st104{fill:url(#SVGID_104_);}
+	.st105{fill:url(#SVGID_105_);}
+	.st106{fill:url(#SVGID_106_);}
+	.st107{fill:url(#SVGID_107_);}
+	.st108{fill:url(#SVGID_108_);}
+	.st109{fill:url(#SVGID_109_);}
+	.st110{fill:url(#SVGID_110_);}
+	.st111{fill:url(#SVGID_111_);}
+	.st112{fill:url(#SVGID_112_);}
+	.st113{fill:url(#SVGID_113_);}
+	.st114{fill:url(#SVGID_114_);}
+	.st115{fill:url(#SVGID_115_);}
+	.st116{fill:url(#SVGID_116_);}
+	.st117{fill:url(#SVGID_117_);}
+	.st118{fill:url(#SVGID_118_);}
+	.st119{fill:url(#SVGID_119_);}
+	.st120{fill:url(#SVGID_120_);}
+	.st121{fill:url(#SVGID_121_);}
+	.st122{fill:url(#SVGID_122_);}
+	.st123{fill:url(#SVGID_123_);}
+	.st124{fill:url(#SVGID_124_);}
+	.st125{fill:url(#SVGID_125_);}
+	.st126{fill:url(#SVGID_126_);}
+	.st127{fill:url(#SVGID_127_);}
+	.st128{fill:url(#SVGID_128_);}
+	.st129{fill:url(#SVGID_129_);}
+	.st130{fill:url(#SVGID_130_);}
+	.st131{fill:url(#SVGID_131_);}
+	.st132{fill:url(#SVGID_132_);}
+	.st133{fill:url(#SVGID_133_);}
+	.st134{fill:url(#SVGID_134_);}
+	.st135{fill:url(#SVGID_135_);}
+	.st136{fill:url(#SVGID_136_);}
+	.st137{fill:url(#SVGID_137_);}
+	.st138{fill:url(#SVGID_138_);}
+	.st139{fill:url(#SVGID_139_);}
+	.st140{fill:url(#SVGID_140_);}
+	.st141{fill:url(#SVGID_141_);}
+	.st142{fill:url(#SVGID_142_);}
+	.st143{fill:url(#SVGID_143_);}
+	.st144{fill:url(#SVGID_144_);}
+	.st145{fill:url(#SVGID_145_);}
+	.st146{fill:url(#SVGID_146_);}
+	.st147{fill:url(#SVGID_147_);}
+	.st148{fill:url(#SVGID_148_);}
+	.st149{fill:url(#SVGID_149_);}
+	.st150{fill:url(#SVGID_150_);}
+	.st151{fill:url(#SVGID_151_);}
+	.st152{fill:url(#SVGID_152_);}
+	.st153{fill:url(#SVGID_153_);}
+	.st154{fill:url(#SVGID_154_);}
+	.st155{fill:url(#SVGID_155_);}
+	.st156{fill:url(#SVGID_156_);}
+	.st157{fill:url(#SVGID_157_);}
+	.st158{fill:url(#SVGID_158_);}
+	.st159{fill:url(#SVGID_159_);}
+	.st160{fill:url(#SVGID_160_);}
+	.st161{fill:url(#SVGID_161_);}
+	.st162{fill:url(#SVGID_162_);}
+	.st163{fill:url(#SVGID_163_);}
+	.st164{fill:url(#SVGID_164_);}
+	.st165{fill:url(#SVGID_165_);}
+	.st166{fill:url(#SVGID_166_);}
+	.st167{fill:url(#SVGID_167_);}
+	.st168{fill:url(#SVGID_168_);}
+	.st169{fill:url(#SVGID_169_);}
+	.st170{fill:url(#SVGID_170_);}
+	.st171{fill:url(#SVGID_171_);}
+	.st172{fill:url(#SVGID_172_);}
+	.st173{fill:url(#SVGID_173_);}
+	.st174{fill:url(#SVGID_174_);}
+	.st175{fill:url(#SVGID_175_);}
+	.st176{fill:url(#SVGID_176_);}
+	.st177{fill:url(#SVGID_177_);}
+	.st178{fill:url(#SVGID_178_);}
+	.st179{fill:url(#SVGID_179_);}
+	.st180{fill:url(#SVGID_180_);}
+	.st181{fill:url(#SVGID_181_);}
+	.st182{fill:url(#SVGID_182_);}
+	.st183{fill:url(#SVGID_183_);}
+	.st184{fill:url(#SVGID_184_);}
