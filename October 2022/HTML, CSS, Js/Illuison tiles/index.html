@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Illusion Tiles </title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script id="vertex" type="x-shader/x-vertex">
+	varying vec2 vUv;
+	void main() { 
+		vUv = uv;
+		gl_Position = vec4(position,1.);
+	}
+</script>
+
+<script id="fragment" type="x-shader/x-vertex">
+	precision highp float;
+
+	varying vec2 vUv;
+
+	uniform float time;
+	uniform float playhead;
+	uniform float aspect;
+	uniform float totalTiles;
+	
+	const float PI = 3.14159265359;
+
+	vec2 rotate2D(vec2 _st, float _angle){
+		_st -= 0.5;
+		_st =  mat2(
+			cos(_angle), -sin(_angle),
+			sin(_angle),  cos(_angle)
+		) * _st;
+		_st += 0.5;
+		return _st;
+	}
+
+	vec2 tile(vec2 _st, float _zoom){
+		_st *= _zoom;
+		return fract(_st);
+	}
+
+	vec2 rotatingTiles(vec2 _st, float _zoom, float _rot){
+		_st = tile(_st, _zoom);
+		_st = rotate2D(_st, _rot);
+		return _st;
+	}
+
+	float box(vec2 _st, vec2 _size, float _smoothEdges){
+		_size = vec2(0.5)-_size*0.5;
+		vec2 aa = vec2(_smoothEdges*.5);
+		vec2 uv = smoothstep(_size,_size+aa,_st);
+		uv *= smoothstep(_size,_size+aa,vec2(1.0)-_st);
+		return uv.x*uv.y;
+	}
+
+	vec3 checker(vec2 _uv, float _zoom){
+		_uv *= _zoom;
+		_uv = fract(_uv);
+		_uv -= 0.5;
+		return vec3(step(_uv.x * _uv.y, 0.));
+	}
+
+	void main () {
+		vec2 newUv = vUv - 0.5;
+		newUv.x *= aspect;
+
+		float rot = PI*0.25+(PI*playhead);
+		float factor = 2.5;
+
+		vec2 checkerUv = newUv;
+		vec2 tilesA_Uv = newUv;
+		vec2 tilesB_Uv = newUv;
+
+		bool condition = (rot >= PI*0.25 && rot <= PI*0.75);
+
+		if(condition){
+			checkerUv += factor/totalTiles;
+			tilesA_Uv += factor/totalTiles;
+			tilesB_Uv += factor/totalTiles;
+		}
+
+		tilesA_Uv = rotatingTiles(tilesA_Uv,totalTiles,rot);
+		tilesB_Uv = rotatingTiles(tilesB_Uv,totalTiles,-rot);
+
+		vec2 boxSize = vec2(0.7125);
+		float boxAa = 0.025;
+
+		vec3 tilesA = vec3(1.);
+		vec3 tilesB = vec3(1.);
+
+		if(condition){
+			tilesA = vec3(0.);
+			tilesB = vec3(0.);
+			tilesA += vec3(box(tilesA_Uv,boxSize,boxAa));
+			tilesB += vec3(box(tilesB_Uv,boxSize,boxAa));
+		}else{
+			tilesA -= vec3(box(tilesA_Uv,boxSize,boxAa));
+			tilesB -= vec3(box(tilesB_Uv,boxSize,boxAa));
+		}
+
+		vec3 checkMask = checker(checkerUv, totalTiles/2.0);
+
+		vec3 final = mix(tilesA, tilesB, checkMask);
+
+		gl_FragColor = vec4(final, 1.);
+  }
+</script>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
