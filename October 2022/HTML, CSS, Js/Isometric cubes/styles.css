@@ -1,0 +1,139 @@
+:root {
+  --gap: 25%;
+
+  /* 
+  Using trigonometry we can calculate the (y) value from (x) and angle (A)
+  An isometric grid has an angle of 30 degrees to the horizontal plane
+  
+  => tangent(30) = y/x = y/var(--gap)
+  => y = tangent(30) * var(--gap)
+  => y = 0.57735 * var(--gap)
+  
+  */
+  --topLeft: translate(calc(-1 * var(--gap)), calc(-1 * var(--gap) * 0.57735));
+  --topRight: translate(var(--gap), calc(-1 * var(--gap) * 0.57735));
+  --bottomLeft: translate(calc(-1 * var(--gap)), calc(var(--gap) * 0.57735));
+  --bottomRight: translate(var(--gap), calc(var(--gap) * 0.57735));
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+svg {
+  height: 100%;
+}
+
+#GreyCubes {
+  opacity: 0;
+  animation: fadeIn 10s ease-in infinite;
+}
+
+@keyframes fadeIn {
+  25% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0;
+  }
+}
+
+.YellowCube,
+.PurpleCube,
+.GreenCube,
+.RedCube,
+.BlueCube,
+.OrangeCube {
+  animation: fallIntoPlace 10s ease-in-out infinite;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.PurpleCube-3,
+.GreenCube-5,
+.RedCube-5,
+.BlueCube-5,
+.OrangeCube-5 {
+  transform: translateY(var(--gap));
+}
+
+.YellowCube-3,
+.GreenCube-1,
+.RedCube-1,
+.BlueCube-1,
+.OrangeCube-1 {
+  transform: translateY(calc(-1 * var(--gap)));
+}
+
+.YellowCube-1,
+.PurpleCube-1,
+.GreenCube-4,
+.RedCube-4,
+.OrangeCube-3 {
+  transform: var(--topRight);
+}
+
+.YellowCube-2,
+.PurpleCube-2,
+.GreenCube-3,
+.BlueCube-2,
+.OrangeCube-2 {
+  transform: var(--topLeft);
+}
+
+.YellowCube-4,
+.PurpleCube-4,
+.RedCube-3,
+.BlueCube-4,
+.OrangeCube-4 {
+  transform: var(--bottomRight);
+}
+
+.YellowCube-5,
+.PurpleCube-5,
+.GreenCube-2,
+.RedCube-2,
+.BlueCube-3 {
+  transform: var(--bottomLeft);
+}
+
+.GreenCube,
+.RedCube {
+  animation-delay: 1s;
+}
+
+.BlueCube,
+.OrangeCube {
+  animation-delay: 2s;
+}
+
+@keyframes fallIntoPlace {
+  10% {
+    opacity: 0;
+  }
+
+  40% {
+    transform: translate(0);
+    opacity: 1;
+  }
+
+  60% {
+    transform: translate(0);
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+  }
+}
