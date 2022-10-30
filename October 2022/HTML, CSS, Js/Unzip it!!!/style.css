@@ -1,0 +1,110 @@
+body {
+  background: #222;
+}
+input {
+opacity: 0; 
+}
+.wrap {
+  background: repeating-linear-gradient(45deg,#999 1%,transparent 2%),repeating-linear-gradient(-45deg,#999 1%,transparent 2%);
+  width: 385px;
+  height: 100px;
+  border: 4px solid darkgray;
+  padding:50px;
+  border-radius: 60px;
+  margin-top: 150px;
+}
+.chain {
+  height: 80px;
+  width: 385px;
+  background: #111;
+  border: 3px solid darkgray;
+  border-radius: 30px;
+  position:absolute;
+  overflow:hidden;
+}
+.chainclosed{
+  position:absolute;
+  z-index:1;
+  margin-left:-4px;
+  transform:scaley(0.8);
+  transition:0.8s steps(23,end);
+}
+.chainopen{
+  position:absolute;
+  z-index:1;
+  margin-top:-25px;
+  margin-left:-380px;
+  transition:0.8s steps(16,start);
+  transform-origin:0% 50%;
+}
+.pull{
+  position:relative;
+  margin-top:-15px;
+  transition:0.9s ease-in;
+  z-index:2;
+}
+.lever {
+  height: 60px;
+  width: 140px;
+  background: linear-gradient(to bottom,#eee,#ded,#eee);
+  border-radius: 30px 20% 20% 30px;
+  position:absolute;
+  border:4px solid #777;
+  margin-left:-160px;
+  margin-top:5px;
+  z-index:4;
+  transform:rotatez(-180deg);
+  transform-origin:20% 50%;
+  transition:0.15s ease-in-out;
+  cursor:pointer;
+}
+.lever:hover,
+#toggle:focus ~ .pull .lever{
+  box-shadow:-5px -5px 1px 5px RGBA(0, 0, 0, 0.5);
+}
+#toggle:checked ~ .pull .lever:hover,
+#toggle:checked:focus ~ .pull .lever{
+  box-shadow:5px 5px 1px 5px RGBA(0, 0, 0, 0.5);
+}
+.base {
+  height: 100px;
+  width: 100px;
+  border-radius: 60px 5px 5px 60px;
+  background: linear-gradient(to bottom,#333,#345,#333);
+  border:2px solid darkgray;
+  position:absolute;
+  margin-top:-12px;
+}
+.centre{
+  position:relative;
+  width:30px;
+  height:30px;
+  margin:15px;
+  margin-left:-50px;
+  border-radius:60%;
+  background:#121;
+}
+input:checked~.pull .lever{ 
+  transform:rotatez(0deg);
+}
+input:checked~.pull{
+  transform:translatex(280px);
+}
+input:checked~.chain .chainclosed{
+  margin-left:380px;
+}
+input:checked~.chain .chainopen{
+  transform:scaley(0.6);
+  margin-left:0px;
+}
+@media (max-width: 550px){
+  body{
+    transform: scale(0.75);
+  }
+}
+
+@media (max-width: 450px){
+  body{
+    transform: scale(0.65);
+  }
+}
