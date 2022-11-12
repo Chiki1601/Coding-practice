@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fire</title>
+    </head>
+    <body><html> 
+ <head> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script> 
+
+ 
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.dom.js"></script> 
+  <style>
+      body{background-color:black;margin:0;padding:0;}
+    </style> 
+ </head> 
+ <body> 
+  <script>
+      alert('click to add more fires')
+      let size=7;
+      let ps=[];
+      function setup(){
+        createCanvas(window.innerWidth,window.innerHeight);
+        ps.push(new ParticleSystem(width/2,height/2,10));
+      }
+      function draw(){
+        background(0);
+        for(let i=0;i<ps.length;i++){
+          ps[i].applyForce(createVector(0,-0.1));
+          ps[i].tick();
+        }
+      }
+      function mousePressed(){
+        if(ps.length>=4){
+          alert('you cannot add more particles');
+        }
+        else{
+          ps.push(new ParticleSystem(mouseX,mouseY,10));
+        }
+      }
+      
+      class ParticleSystem{
+        constructor(x,y,size){
+          this.x=x;
+          this.y=y;
+          this.arr=[];
+          for(let i=0;i<size;i++){
+            this.arr[i]=new Particle(this.x,this.y,255);
+          }
+        }
+        tick(){
+          for(let i=0;i<2;i++){
+            this.arr.push(new Particle(this.x,this.y,255));
+          }
+          this.attract();
+          for(let i=0;i<this.arr.length;i++){
+            this.arr[i].show();
+            this.arr[i].update();
+            if(this.arr[i].life<=0){
+              this.arr=deleteFrom(this.arr,this.arr[i]);
+            }
+          }
+        }
+        applyForce(f){
+          for(let i=0;i<this.arr.length;i++){
+            this.arr[i].applyForce(f);
+          }
+        }
+        attract(){
+          for(let i=0;i<this.arr.length;i++){
+            let force=createVector(this.x-this.arr[i].location.x,0);
+            force.normalize();
+            force.mult(0.05);
+            this.arr[i].applyForce(force);
+          }
+        }
+      }
+      
+      class Particle{
+        constructor(x,y,life){
+          this.location=createVector(x,y);
+          this.velocity=p5.Vector.random2D();
+          this.velocity.mult(1.3);
+          this.acceleration=createVector(0,0);
+          this.mass=random(1,4);
+          this.life=life;
+        }
+        update(){
+          this.velocity.add(this.acceleration);
+          this.velocity.limit(30);
+          this.location.add(this.velocity);
+          this.acceleration.mult(0);
+          this.life-=4;
+        }
+        show(){
+          noStroke();
+          fill(248,62,11,this.life);
+          circle(this.location.x,this.location.y,this.mass*size);
+        }
+        applyForce(force){
+          this.acceleration.add(force);
+        }
+      }
+      function deleteFrom(array,element){
+        let newArray=[];
+        for(let i=0;i<array.length;i++){
+          if(array[i]!=element){
+            newArray.push(array[i]);
+          }
+        }
+        return newArray;
+      }
+    </script> 
+ </body>
+</html>
+        
+    </body>
+</html>
+
