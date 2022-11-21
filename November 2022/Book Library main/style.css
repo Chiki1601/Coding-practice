@@ -1,0 +1,196 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+background: rgb(2,0,36);
+background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(255,119,119,1) 0%, rgba(255,247,214,1) 100%);
+}
+
+body, html {
+    margin: 0;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    width: 100%;
+    padding: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    background-color: rgb(255, 13, 13);
+    border-bottom: 2px solid rgb(173, 0, 0);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    filter: drop-shadow(0px 10px 4px rgb(199, 101, 101));
+}
+
+.add-book{
+    float: right;
+    background-color: rgb(233, 148, 79);
+    font-weight: bold;
+    padding: 15px;
+    text-align: center;
+    border-radius: 1em;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: background-color .1s ease;
+}
+
+.add-book:hover{
+    background-color: rgb(255, 165, 92);
+}
+
+.add-book:hover{
+    cursor: pointer;
+}
+
+.add-book-form{
+    position: absolute;
+    display: block;
+    background-color: #fff;
+    text-align: center;
+    padding-top: 2em;
+    width: 500px;
+    top: 20%;
+    left: 40%;
+    margin-left: -25%;
+    border: 1px solid black;
+    border-radius: 15px;
+    z-index: 1002;
+    
+}
+
+.fa-book {
+    color: #fff;
+    font-size: 35px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.add-book-form .fa-book{
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 100px;
+    display: block;
+}
+
+.add-book-form > * {
+    
+    color: red;
+}
+
+#checkdiv > * { 
+    display: inline;
+}
+
+.form-heading {
+    color: black;
+}
+
+.alert-div {
+    color: red;
+    height: 10px;
+    width: auto;
+}
+
+.white_overlay {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 120%;
+    background-color: #fff;
+    z-index: 1001;
+    opacity: .8;
+    filter: alpha(opacity=80);
+}
+
+#main {
+    display: grid;
+    padding-top: 1.2em;
+    font-family: 'Cedarville Cursive', cursive;
+    height: 100%;
+    padding-top: 10vh;
+    place-items: start;
+    grid-template-columns: repeat(3, 1fr);
+    z-index: 1;
+}
+
+.book {
+    /* background-color: rgb(255, 212, 187); */
+    background-color: rgb(66, 38, 0);
+    border: 2px solid black;
+    border-radius: 4px;
+    width: 200px;
+    height: 400px;
+    margin: 20px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2em;
+    filter: drop-shadow(5px 5px 4px #2c2c2c);
+}
+
+.book h3 {
+    background-color: #fff;
+    margin: 5px;
+    color: red;
+    font-size: 1.5em;
+    border-radius: 10px;
+}
+
+.cover {
+    /* background-color: rgb(236, 135, 40); */
+    background: rgb(0, 0, 0);
+    border: 2px solid rgb(196, 143, 0);
+    color: #fff;
+    padding: 5px;
+    margin: 10px;
+    height: 285px;
+}
+
+.footer {
+    text-align: center;
+    font-size: .6em;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.remove {
+    background-color: red;
+    color: #fff;
+}
+
+.remove:hover {
+    background-color: #ffb89d;
+    color:rgb(255, 255, 255);
+}
+
+.change-status {
+    color: #fff;
+    background-color: #464646;
+}
+
+.change-status:hover {
+    color: #fff;
+    background-color: #919191;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
