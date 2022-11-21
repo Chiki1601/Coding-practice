@@ -1,0 +1,67 @@
+canvas{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);  
+}
+#rainCanvas{
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(109, 109, 114));  
+}
+body{
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#container{
+    position: absolute;
+    z-index: 10;;
+    background: linear-gradient(to bottom ,rgba(43, 30, 184,0.2),rgba(197, 88, 192,0.2));
+    width: 380px;
+    height: 480px;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.4);
+}
+h2{
+    position: relative;
+    color: antiquewhite;
+    margin: 20px;
+    font-size: 35px;
+    left: 30%;
+}
+label{
+    margin: 15px;
+    padding: 15px;
+    color: rgb(240, 229, 204);
+    font-size: 25px;
+}
+input{
+    margin: 25px;
+    margin-top: 30px;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    font-size: px;
+    width: 80%;
+    background: rgba(253, 252, 255, 0.3);
+}
+#btn{
+    position: relative;
+    margin: 25px;
+    padding: 10px;
+    width: 70%;
+    height: 13%;
+    border: none;
+    outline: none;
+    left: 8%;
+    top: 2%;
+    border-radius: 50px;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to bottom ,rgba(255, 17, 17,0.2),rgba(197, 12, 12));
+}
