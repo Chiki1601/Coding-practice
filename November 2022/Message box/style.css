@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eaedf2;
+}
+
+a {
+    text-decoration: none;
+}
+
+.frem {
+    width: 26rem;
+    height: 100%;
+    background: white;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 12px 12px 12px;
+}
+.frem .logo-name {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 30px;
+}
+
+.frem .logo-name .logo {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    position: relative;
+    top: -25px;
+    left: -92px;
+    border-radius: 35px 35px 0px 0px;
+}
+.frem .logo-name .logo::before {
+    content: "";
+    width: 31px;
+    height: 38px;
+    background: white;
+    position: absolute;
+    right: -23px;
+    top: 23px;
+}
+
+.frem .logo-name .logo::after {
+    content: "";
+    width: 31px;
+    height: 38px;
+    background: #eaedf2;
+    position: absolute;
+    right: -28px;
+    top: 5px;
+    border-bottom-left-radius: 25px;
+}
+
+.frem .logo-name .logo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 29px;
+    object-fit: cover;
+}
+.frem .logo-name p {
+    position: relative;
+    left: -61px;
+    font-weight: 600;
+    color: #464646;
+}
+.frem .text-area {
+    width: 24rem;
+    height: 1005;
+    min-height: 7rem;
+    background: #eaedf2;
+    border-radius: 18px;
+    border: none;
+    outline: none;
+    padding: 12px;
+    color: #484848;
+    font-size: 21px;
+    font-family: cursive;
+}
+.text-area:empty::before {
+    content: attr(data-placeholder);
+    color: #7c7c7c;
+    font-family: auto;
+}
+.bottom-cont {
+    width: 25rem;
+    height: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.bottom-cont a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 17px;
+}
+
+.bottom-cont a img {
+    width: 27px;
+}
+.bottom-cont a:nth-child(1) {
+    background: #1051ff38;
+    color: #1051ff;
+}
+.bottom-cont a:nth-child(2) {
+    background: #15cf3736;
+    color: #15cf37;
+}
+.bottom-cont a:nth-child(3) {
+    background: #ffc02440;
+}
+.bottom-cont a:nth-child(4) {
+    background: #ff344b40;
+}
