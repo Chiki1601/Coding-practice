@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text reveal animation</title>
+    <!-- Link to your stylesheet -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- 
+      Here we break up the text by nesting spans inside the main title. This will allow for different animation delays.
+    
+      NOTE: This would normally be used on 2-3 words and not a lot as shown here in this demo.
+      Also, keep in mind that this works only on refresh. This means that if you want to use this,
+      you have to add this to the text that shows up on your website's hero section (the first section visible to the user when they visit your site).
+      In order to make this work on scroll when the elements come into view, JavaScript is required. 
+    -->
+    <h1 class="title">
+      <!-- Title-content will have general styles that apply to all spans. The second classes are for individual use for the different animation delays. -->
+      <span class="title-content">Shoot</span>
+      <span class="title-content title-second">your shot.</span>
+      <span class="title-content title-third">You will always</span>
+      <span class="title-content title-fourth">miss if you don't.</span>
+    </h1>
+</body>
+</html>
