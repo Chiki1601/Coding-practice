@@ -1,0 +1,12 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+}
+#clock{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3em;
+    color:red
+}
