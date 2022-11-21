@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton-framework/1.1.1/skeleton.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Bookshelf</title>
+</head>
+<body>
+    <nav>
+        <i class="fas fa-book"></i>
+        Libris
+        <div class="add-book noselect">
+            Add Book
+        </div>
+    </nav>
+    <div class="white_overlay"></div>
+    <div class="add-book-form">
+        <i class="fas fa-book"></i>
+        <div class="form-heading">
+            Add Book Information Below
+            <span class="alert-div"></span>
+        </div>
+
+        <form>
+            <input type="text"  placeholder="Book Title" name="book-title" id="book-title">
+            <input type="text" placeholder="Author Name" name="author" id="author">
+            <input type="text" placeholder="Number of Pages" name="pages" id="pages">
+            <div id="checkdiv">
+                <input type="checkbox" name="read" id="read-status">
+                <label for="read">Read?</label>
+            </div>
+            <button id="submitBookBtn" type="submit">Enter Book to Library</button>
+        </form>
+    </div>
+    <div id="main">
+    </div>
+    <footer class="footer">2020 Michael Hamilton</footer>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
