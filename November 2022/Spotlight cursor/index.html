@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotLight Cursor Effect</title>
+    <style>
+        body{
+            background-color: black;
+            height: 100vh;
+            overflow: hidden;
+            font-family: sans-serif;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            cursor: none;
+        }
+        h1{
+            font-size: 4em;
+            color: #fff;
+        }
+        h1:hover ~ .cursor{
+            width: 150px;
+            height: 150px;
+        }
+        .cursor{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            background: #fff;
+            border-radius: 100%;
+            mix-blend-mode: exclusion;   
+            transition: 0.1s; 
+            transform: translate(-50%,-50%);
+            pointer-events: none;
+        }
+    </style>
+    <script>
+        function getCordinate(event){
+            let ele = document.querySelector('.cursor');
+            ele.style.left = event.clientX+'px';
+            ele.style.top = event.clientY+'px';
+        }
+    </script>
+</head>
+<body onmousemove="getCordinate(event)">
+    <h1>SPOTLIGHT CURSOR EFFECT</h1>
+    <div class="cursor"></div>
+</body>
+</html>
