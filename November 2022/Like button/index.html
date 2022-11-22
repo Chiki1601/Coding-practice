@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .frem {
+        width: 5rem;
+        height: 5rem;
+        background: #00000036;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 28px;
+        cursor: pointer;
+    }
+
+    .logo {
+        width: 54px;
+        height: 54px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 54px;
+    }
+
+    .aclik {
+        position: absolute;
+        display: none;
+    }
+
+    .aclik.activelik {
+        display: block;
+    }
+
+    .numb:before {
+        content: '19K';
+        font-size: 21px;
+        margin-left: 7px;
+        font-weight: 600;
+        color: #ffffff;
+        font-family: sans-serif;
+    }
+
+    .numb.activenum:before {
+        content: '1000K';
+        color: #ff3941;
+    }
+</style>
+
+<body>
+    <div class="frem" onclick="likes()">
+        <div class="logo">
+            <img src="./heart.png" alt="">
+            <img src="./heart (1).png" alt="" class="aclik">
+        </div>
+        <div class="numb"></div>
+    </div>
+</body>
+<script>
+    function likes() {
+        document.querySelector('.aclik').classList.toggle('activelik');
+        document.querySelector('.numb').classList.toggle('activenum');
+    }
+</script>
+
+</html>
