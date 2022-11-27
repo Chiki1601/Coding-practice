@@ -1,0 +1,10 @@
+*, *::before, *::after {
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#canvas {
+  border: none;
+  margin-top: 20px;
+  outline: none;
+}
