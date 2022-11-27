@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> CSS Animation with GSAP - gooey effect</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<svg>
+		<filter id="gooey">
+			<feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+			<feColorMatrix in="blur" mode="matrix" values="
+				1 0 0 0 0  
+				0 1 0 0 0  
+				0 0 1 0 0  
+				0 0 0 15 -5" result="goo" />
+			<feBlend in="SourceGraphic" in2="goo" />
+		</filter>
+	</svg>
+	<div class="container">
+		<div id="sidebarMenu">
+			<svg id="hamburger" x="0px" y="0px" viewBox="0 0 64 64">
+				<line id="line-3" x1="16" y1="40" x2="48" y2="40" />
+				<line id="line-2" x1="16" y1="32" x2="48" y2="32" />
+				<line id="line-1" x1="16" y1="24" x2="48" y2="24" />
+			</svg>
+			<ul id="menu">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Newslatter</a></li>
+			</ul>
+		</div>
+		<div class="drop drop-1"></div>
+		<div class="drop drop-2"></div>
+		<div class="drop drop-3"></div>
+	</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
