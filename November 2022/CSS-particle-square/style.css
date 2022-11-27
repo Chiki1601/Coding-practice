@@ -1,0 +1,1859 @@
+body {
+  background: #08407C;
+}
+
+.square {
+  width: 400px;
+  border-radius: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.light {
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  background: #F1678E;
+  position: relative;
+  float: left;
+  transition: all 0.5s ease;
+}
+
+.light:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 120px;
+  height: 120px;
+  margin-top: -50px;
+  margin-left: -50px;
+  z-index: 0;
+  border-radius: 100px;
+}
+
+.light:nth-child(3n+1) {
+  margin-left: 15px;
+  -webkit-animation: orbit 6s linear -149s infinite;
+          animation: orbit 6s linear -149s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+2) {
+  margin-left: 17px;
+  -webkit-animation: orbit 6s linear -149s infinite;
+          animation: orbit 6s linear -149s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+3) {
+  margin-left: 10px;
+  -webkit-animation: orbit 6s linear -147s infinite;
+          animation: orbit 6s linear -147s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+4) {
+  margin-left: 16px;
+  -webkit-animation: orbit 6s linear -148s infinite;
+          animation: orbit 6s linear -148s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+5) {
+  margin-left: 39px;
+  -webkit-animation: orbit 6s linear -145s infinite;
+          animation: orbit 6s linear -145s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+6) {
+  margin-left: 27px;
+  -webkit-animation: orbit 6s linear -144s infinite;
+          animation: orbit 6s linear -144s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+7) {
+  margin-left: 6px;
+  -webkit-animation: orbit 6s linear -146s infinite;
+          animation: orbit 6s linear -146s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+8) {
+  margin-left: 3px;
+  -webkit-animation: orbit 6s linear -142s infinite;
+          animation: orbit 6s linear -142s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+9) {
+  margin-left: 19px;
+  -webkit-animation: orbit 6s linear -145s infinite;
+          animation: orbit 6s linear -145s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+10) {
+  margin-left: 6px;
+  -webkit-animation: orbit 6s linear -148s infinite;
+          animation: orbit 6s linear -148s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+11) {
+  margin-left: 37px;
+  -webkit-animation: orbit 6s linear -148s infinite;
+          animation: orbit 6s linear -148s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+12) {
+  margin-left: 44px;
+  -webkit-animation: orbit 6s linear -149s infinite;
+          animation: orbit 6s linear -149s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+13) {
+  margin-left: 28px;
+  -webkit-animation: orbit 6s linear -146s infinite;
+          animation: orbit 6s linear -146s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+14) {
+  margin-left: 44px;
+  -webkit-animation: orbit 6s linear -138s infinite;
+          animation: orbit 6s linear -138s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+15) {
+  margin-left: 45px;
+  -webkit-animation: orbit 6s linear -135s infinite;
+          animation: orbit 6s linear -135s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+16) {
+  margin-left: 40px;
+  -webkit-animation: orbit 6s linear -135s infinite;
+          animation: orbit 6s linear -135s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+17) {
+  margin-left: 6px;
+  -webkit-animation: orbit 6s linear -141s infinite;
+          animation: orbit 6s linear -141s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+18) {
+  margin-left: 13px;
+  -webkit-animation: orbit 6s linear -144s infinite;
+          animation: orbit 6s linear -144s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+19) {
+  margin-left: 25px;
+  -webkit-animation: orbit 6s linear -135s infinite;
+          animation: orbit 6s linear -135s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+20) {
+  margin-left: 7px;
+  -webkit-animation: orbit 6s linear -149s infinite;
+          animation: orbit 6s linear -149s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+21) {
+  margin-left: 34px;
+  -webkit-animation: orbit 6s linear -142s infinite;
+          animation: orbit 6s linear -142s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+22) {
+  margin-left: 32px;
+  -webkit-animation: orbit 6s linear -147s infinite;
+          animation: orbit 6s linear -147s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+23) {
+  margin-left: 19px;
+  -webkit-animation: orbit 6s linear -131s infinite;
+          animation: orbit 6s linear -131s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+24) {
+  margin-left: 50px;
+  -webkit-animation: orbit 6s linear -135s infinite;
+          animation: orbit 6s linear -135s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+25) {
+  margin-left: 44px;
+  -webkit-animation: orbit 6s linear -133s infinite;
+          animation: orbit 6s linear -133s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+26) {
+  margin-left: 29px;
+  -webkit-animation: orbit 6s linear -125s infinite;
+          animation: orbit 6s linear -125s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+27) {
+  margin-left: 35px;
+  -webkit-animation: orbit 6s linear -132s infinite;
+          animation: orbit 6s linear -132s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+28) {
+  margin-left: 17px;
+  -webkit-animation: orbit 6s linear -148s infinite;
+          animation: orbit 6s linear -148s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+29) {
+  margin-left: 41px;
+  -webkit-animation: orbit 6s linear -142s infinite;
+          animation: orbit 6s linear -142s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+30) {
+  margin-left: 45px;
+  -webkit-animation: orbit 6s linear -130s infinite;
+          animation: orbit 6s linear -130s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+31) {
+  margin-left: 35px;
+  -webkit-animation: orbit 6s linear -144s infinite;
+          animation: orbit 6s linear -144s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+32) {
+  margin-left: 25px;
+  -webkit-animation: orbit 6s linear -137s infinite;
+          animation: orbit 6s linear -137s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+33) {
+  margin-left: 37px;
+  -webkit-animation: orbit 6s linear -118s infinite;
+          animation: orbit 6s linear -118s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+34) {
+  margin-left: 20px;
+  -webkit-animation: orbit 6s linear -121s infinite;
+          animation: orbit 6s linear -121s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+35) {
+  margin-left: 37px;
+  -webkit-animation: orbit 6s linear -124s infinite;
+          animation: orbit 6s linear -124s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+36) {
+  margin-left: 46px;
+  -webkit-animation: orbit 6s linear -127s infinite;
+          animation: orbit 6s linear -127s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+37) {
+  margin-left: 4px;
+  -webkit-animation: orbit 6s linear -144s infinite;
+          animation: orbit 6s linear -144s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+38) {
+  margin-left: 9px;
+  -webkit-animation: orbit 6s linear -126s infinite;
+          animation: orbit 6s linear -126s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+39) {
+  margin-left: 12px;
+  -webkit-animation: orbit 6s linear -125s infinite;
+          animation: orbit 6s linear -125s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+40) {
+  margin-left: 37px;
+  -webkit-animation: orbit 6s linear -118s infinite;
+          animation: orbit 6s linear -118s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+41) {
+  margin-left: 42px;
+  -webkit-animation: orbit 6s linear -130s infinite;
+          animation: orbit 6s linear -130s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+42) {
+  margin-left: 37px;
+  -webkit-animation: orbit 6s linear -124s infinite;
+          animation: orbit 6s linear -124s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+43) {
+  margin-left: 42px;
+  -webkit-animation: orbit 6s linear -135s infinite;
+          animation: orbit 6s linear -135s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+44) {
+  margin-left: 7px;
+  -webkit-animation: orbit 6s linear -128s infinite;
+          animation: orbit 6s linear -128s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+45) {
+  margin-left: 50px;
+  -webkit-animation: orbit 6s linear -142s infinite;
+          animation: orbit 6s linear -142s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+46) {
+  margin-left: 17px;
+  -webkit-animation: orbit 6s linear -109s infinite;
+          animation: orbit 6s linear -109s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+47) {
+  margin-left: 45px;
+  -webkit-animation: orbit 6s linear -107s infinite;
+          animation: orbit 6s linear -107s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+48) {
+  margin-left: 40px;
+  -webkit-animation: orbit 6s linear -113s infinite;
+          animation: orbit 6s linear -113s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+49) {
+  margin-left: 29px;
+  -webkit-animation: orbit 6s linear -136s infinite;
+          animation: orbit 6s linear -136s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+50) {
+  margin-left: 48px;
+  -webkit-animation: orbit 6s linear -109s infinite;
+          animation: orbit 6s linear -109s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+51) {
+  margin-left: 46px;
+  -webkit-animation: orbit 6s linear -107s infinite;
+          animation: orbit 6s linear -107s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+52) {
+  margin-left: 3px;
+  -webkit-animation: orbit 6s linear -138s infinite;
+          animation: orbit 6s linear -138s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+53) {
+  margin-left: 41px;
+  -webkit-animation: orbit 6s linear -119s infinite;
+          animation: orbit 6s linear -119s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+54) {
+  margin-left: 27px;
+  -webkit-animation: orbit 6s linear -109s infinite;
+          animation: orbit 6s linear -109s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+55) {
+  margin-left: 18px;
+  -webkit-animation: orbit 6s linear -133s infinite;
+          animation: orbit 6s linear -133s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+56) {
+  margin-left: 41px;
+  -webkit-animation: orbit 6s linear -128s infinite;
+          animation: orbit 6s linear -128s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+57) {
+  margin-left: 17px;
+  -webkit-animation: orbit 6s linear -120s infinite;
+          animation: orbit 6s linear -120s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+58) {
+  margin-left: 4px;
+  -webkit-animation: orbit 6s linear -113s infinite;
+          animation: orbit 6s linear -113s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+59) {
+  margin-left: 35px;
+  -webkit-animation: orbit 6s linear -122s infinite;
+          animation: orbit 6s linear -122s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+60) {
+  margin-left: 31px;
+  -webkit-animation: orbit 6s linear -128s infinite;
+          animation: orbit 6s linear -128s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+61) {
+  margin-left: 15px;
+  -webkit-animation: orbit 6s linear -106s infinite;
+          animation: orbit 6s linear -106s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+62) {
+  margin-left: 26px;
+  -webkit-animation: orbit 6s linear -90s infinite;
+          animation: orbit 6s linear -90s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+63) {
+  margin-left: 45px;
+  -webkit-animation: orbit 6s linear -96s infinite;
+          animation: orbit 6s linear -96s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+64) {
+  margin-left: 45px;
+  -webkit-animation: orbit 6s linear -112s infinite;
+          animation: orbit 6s linear -112s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+65) {
+  margin-left: 9px;
+  -webkit-animation: orbit 6s linear -90s infinite;
+          animation: orbit 6s linear -90s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+66) {
+  margin-left: 45px;
+  -webkit-animation: orbit 6s linear -134s infinite;
+          animation: orbit 6s linear -134s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+67) {
+  margin-left: 50px;
+  -webkit-animation: orbit 6s linear -100s infinite;
+          animation: orbit 6s linear -100s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+68) {
+  margin-left: 20px;
+  -webkit-animation: orbit 6s linear -142s infinite;
+          animation: orbit 6s linear -142s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+69) {
+  margin-left: 37px;
+  -webkit-animation: orbit 6s linear -114s infinite;
+          animation: orbit 6s linear -114s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+70) {
+  margin-left: 42px;
+  -webkit-animation: orbit 6s linear -130s infinite;
+          animation: orbit 6s linear -130s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+71) {
+  margin-left: 6px;
+  -webkit-animation: orbit 6s linear -79s infinite;
+          animation: orbit 6s linear -79s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+72) {
+  margin-left: 28px;
+  -webkit-animation: orbit 6s linear -82s infinite;
+          animation: orbit 6s linear -82s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+73) {
+  margin-left: 46px;
+  -webkit-animation: orbit 6s linear -141s infinite;
+          animation: orbit 6s linear -141s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+74) {
+  margin-left: 2px;
+  -webkit-animation: orbit 6s linear -110s infinite;
+          animation: orbit 6s linear -110s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+75) {
+  margin-left: 5px;
+  -webkit-animation: orbit 6s linear -108s infinite;
+          animation: orbit 6s linear -108s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+76) {
+  margin-left: 49px;
+  -webkit-animation: orbit 6s linear -76s infinite;
+          animation: orbit 6s linear -76s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+77) {
+  margin-left: 39px;
+  -webkit-animation: orbit 6s linear -75s infinite;
+          animation: orbit 6s linear -75s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+78) {
+  margin-left: 30px;
+  -webkit-animation: orbit 6s linear -141s infinite;
+          animation: orbit 6s linear -141s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+79) {
+  margin-left: 36px;
+  -webkit-animation: orbit 6s linear -96s infinite;
+          animation: orbit 6s linear -96s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+80) {
+  margin-left: 42px;
+  -webkit-animation: orbit 6s linear -122s infinite;
+          animation: orbit 6s linear -122s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+81) {
+  margin-left: 48px;
+  -webkit-animation: orbit 6s linear -128s infinite;
+          animation: orbit 6s linear -128s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+82) {
+  margin-left: 18px;
+  -webkit-animation: orbit 6s linear -106s infinite;
+          animation: orbit 6s linear -106s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+83) {
+  margin-left: 41px;
+  -webkit-animation: orbit 6s linear -133s infinite;
+          animation: orbit 6s linear -133s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+84) {
+  margin-left: 3px;
+  -webkit-animation: orbit 6s linear -102s infinite;
+          animation: orbit 6s linear -102s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+85) {
+  margin-left: 37px;
+  -webkit-animation: orbit 6s linear -106s infinite;
+          animation: orbit 6s linear -106s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+86) {
+  margin-left: 1px;
+  -webkit-animation: orbit 6s linear -67s infinite;
+          animation: orbit 6s linear -67s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+87) {
+  margin-left: 39px;
+  -webkit-animation: orbit 6s linear -132s infinite;
+          animation: orbit 6s linear -132s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+88) {
+  margin-left: 40px;
+  -webkit-animation: orbit 6s linear -101s infinite;
+          animation: orbit 6s linear -101s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+89) {
+  margin-left: 37px;
+  -webkit-animation: orbit 6s linear -132s infinite;
+          animation: orbit 6s linear -132s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+90) {
+  margin-left: 11px;
+  -webkit-animation: orbit 6s linear -109s infinite;
+          animation: orbit 6s linear -109s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+91) {
+  margin-left: 31px;
+  -webkit-animation: orbit 6s linear -135s infinite;
+          animation: orbit 6s linear -135s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+92) {
+  margin-left: 50px;
+  -webkit-animation: orbit 6s linear -95s infinite;
+          animation: orbit 6s linear -95s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+93) {
+  margin-left: 31px;
+  -webkit-animation: orbit 6s linear -115s infinite;
+          animation: orbit 6s linear -115s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+94) {
+  margin-left: 43px;
+  -webkit-animation: orbit 6s linear -75s infinite;
+          animation: orbit 6s linear -75s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+95) {
+  margin-left: 14px;
+  -webkit-animation: orbit 6s linear -149s infinite;
+          animation: orbit 6s linear -149s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+96) {
+  margin-left: 29px;
+  -webkit-animation: orbit 6s linear -54s infinite;
+          animation: orbit 6s linear -54s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+97) {
+  margin-left: 46px;
+  -webkit-animation: orbit 6s linear -140s infinite;
+          animation: orbit 6s linear -140s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+98) {
+  margin-left: 10px;
+  -webkit-animation: orbit 6s linear -149s infinite;
+          animation: orbit 6s linear -149s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+99) {
+  margin-left: 33px;
+  -webkit-animation: orbit 6s linear -83s infinite;
+          animation: orbit 6s linear -83s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+100) {
+  margin-left: 43px;
+  -webkit-animation: orbit 6s linear -109s infinite;
+          animation: orbit 6s linear -109s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+101) {
+  margin-left: 1px;
+  -webkit-animation: orbit 6s linear -121s infinite;
+          animation: orbit 6s linear -121s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+102) {
+  margin-left: 11px;
+  -webkit-animation: orbit 6s linear -78s infinite;
+          animation: orbit 6s linear -78s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+103) {
+  margin-left: 43px;
+  -webkit-animation: orbit 6s linear -83s infinite;
+          animation: orbit 6s linear -83s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+104) {
+  margin-left: 48px;
+  -webkit-animation: orbit 6s linear -96s infinite;
+          animation: orbit 6s linear -96s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+105) {
+  margin-left: 36px;
+  -webkit-animation: orbit 6s linear -124s infinite;
+          animation: orbit 6s linear -124s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+106) {
+  margin-left: 19px;
+  -webkit-animation: orbit 6s linear -49s infinite;
+          animation: orbit 6s linear -49s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+107) {
+  margin-left: 49px;
+  -webkit-animation: orbit 6s linear -116s infinite;
+          animation: orbit 6s linear -116s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+108) {
+  margin-left: 41px;
+  -webkit-animation: orbit 6s linear -88s infinite;
+          animation: orbit 6s linear -88s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+109) {
+  margin-left: 22px;
+  -webkit-animation: orbit 6s linear -71s infinite;
+          animation: orbit 6s linear -71s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+110) {
+  margin-left: 27px;
+  -webkit-animation: orbit 6s linear -129s infinite;
+          animation: orbit 6s linear -129s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+111) {
+  margin-left: 35px;
+  -webkit-animation: orbit 6s linear -103s infinite;
+          animation: orbit 6s linear -103s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+112) {
+  margin-left: 14px;
+  -webkit-animation: orbit 6s linear -78s infinite;
+          animation: orbit 6s linear -78s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+113) {
+  margin-left: 25px;
+  -webkit-animation: orbit 6s linear -90s infinite;
+          animation: orbit 6s linear -90s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+114) {
+  margin-left: 32px;
+  -webkit-animation: orbit 6s linear -82s infinite;
+          animation: orbit 6s linear -82s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+115) {
+  margin-left: 3px;
+  -webkit-animation: orbit 6s linear -96s infinite;
+          animation: orbit 6s linear -96s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+116) {
+  margin-left: 19px;
+  -webkit-animation: orbit 6s linear -43s infinite;
+          animation: orbit 6s linear -43s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+117) {
+  margin-left: 34px;
+  -webkit-animation: orbit 6s linear -56s infinite;
+          animation: orbit 6s linear -56s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+118) {
+  margin-left: 42px;
+  -webkit-animation: orbit 6s linear -77s infinite;
+          animation: orbit 6s linear -77s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+119) {
+  margin-left: 39px;
+  -webkit-animation: orbit 6s linear -114s infinite;
+          animation: orbit 6s linear -114s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+120) {
+  margin-left: 45px;
+  -webkit-animation: orbit 6s linear -141s infinite;
+          animation: orbit 6s linear -141s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+121) {
+  margin-left: 9px;
+  -webkit-animation: orbit 6s linear -82s infinite;
+          animation: orbit 6s linear -82s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+122) {
+  margin-left: 24px;
+  -webkit-animation: orbit 6s linear -144s infinite;
+          animation: orbit 6s linear -144s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+123) {
+  margin-left: 33px;
+  -webkit-animation: orbit 6s linear -91s infinite;
+          animation: orbit 6s linear -91s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+124) {
+  margin-left: 18px;
+  -webkit-animation: orbit 6s linear -133s infinite;
+          animation: orbit 6s linear -133s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+125) {
+  margin-left: 18px;
+  -webkit-animation: orbit 6s linear -66s infinite;
+          animation: orbit 6s linear -66s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+126) {
+  margin-left: 13px;
+  -webkit-animation: orbit 6s linear -37s infinite;
+          animation: orbit 6s linear -37s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+127) {
+  margin-left: 30px;
+  -webkit-animation: orbit 6s linear -86s infinite;
+          animation: orbit 6s linear -86s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+128) {
+  margin-left: 47px;
+  -webkit-animation: orbit 6s linear -64s infinite;
+          animation: orbit 6s linear -64s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+129) {
+  margin-left: 14px;
+  -webkit-animation: orbit 6s linear -72s infinite;
+          animation: orbit 6s linear -72s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+130) {
+  margin-left: 22px;
+  -webkit-animation: orbit 6s linear -112s infinite;
+          animation: orbit 6s linear -112s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+131) {
+  margin-left: 33px;
+  -webkit-animation: orbit 6s linear -93s infinite;
+          animation: orbit 6s linear -93s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+132) {
+  margin-left: 42px;
+  -webkit-animation: orbit 6s linear -20s infinite;
+          animation: orbit 6s linear -20s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+133) {
+  margin-left: 37px;
+  -webkit-animation: orbit 6s linear -145s infinite;
+          animation: orbit 6s linear -145s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+134) {
+  margin-left: 48px;
+  -webkit-animation: orbit 6s linear -40s infinite;
+          animation: orbit 6s linear -40s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+135) {
+  margin-left: 37px;
+  -webkit-animation: orbit 6s linear -83s infinite;
+          animation: orbit 6s linear -83s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+136) {
+  margin-left: 19px;
+  -webkit-animation: orbit 6s linear -40s infinite;
+          animation: orbit 6s linear -40s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+137) {
+  margin-left: 20px;
+  -webkit-animation: orbit 6s linear -99s infinite;
+          animation: orbit 6s linear -99s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+138) {
+  margin-left: 6px;
+  -webkit-animation: orbit 6s linear -48s infinite;
+          animation: orbit 6s linear -48s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+139) {
+  margin-left: 6px;
+  -webkit-animation: orbit 6s linear -11s infinite;
+          animation: orbit 6s linear -11s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+140) {
+  margin-left: 13px;
+  -webkit-animation: orbit 6s linear -17s infinite;
+          animation: orbit 6s linear -17s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+141) {
+  margin-left: 25px;
+  -webkit-animation: orbit 6s linear -118s infinite;
+          animation: orbit 6s linear -118s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+142) {
+  margin-left: 29px;
+  -webkit-animation: orbit 6s linear -26s infinite;
+          animation: orbit 6s linear -26s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+143) {
+  margin-left: 48px;
+  -webkit-animation: orbit 6s linear -121s infinite;
+          animation: orbit 6s linear -121s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+144) {
+  margin-left: 25px;
+  -webkit-animation: orbit 6s linear -78s infinite;
+          animation: orbit 6s linear -78s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+145) {
+  margin-left: 20px;
+  -webkit-animation: orbit 6s linear -122s infinite;
+          animation: orbit 6s linear -122s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+146) {
+  margin-left: 7px;
+  -webkit-animation: orbit 6s linear -37s infinite;
+          animation: orbit 6s linear -37s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+147) {
+  margin-left: 43px;
+  -webkit-animation: orbit 6s linear -84s infinite;
+          animation: orbit 6s linear -84s infinite;
+  background: #FF9D42;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+148) {
+  margin-left: 43px;
+  -webkit-animation: orbit 6s linear -118s infinite;
+          animation: orbit 6s linear -118s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+149) {
+  margin-left: 47px;
+  -webkit-animation: orbit 6s linear -39s infinite;
+          animation: orbit 6s linear -39s infinite;
+  background: #5FCCD3;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+.light:nth-child(3n+150) {
+  margin-left: 38px;
+  -webkit-animation: orbit 6s linear -80s infinite;
+          animation: orbit 6s linear -80s infinite;
+  background: #F1678E;
+}
+
+.light:hover:after {
+  background: #FFD503;
+  opacity: 0.1;
+}
+
+@-webkit-keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(5px) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) translateX(5px) rotate(-180deg) scale(0.25);
+  }
+  100% {
+    transform: rotate(360deg) translateX(5px) rotate(-360deg) scale(1);
+  }
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(5px) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) translateX(5px) rotate(-180deg) scale(0.25);
+  }
+  100% {
+    transform: rotate(360deg) translateX(5px) rotate(-360deg) scale(1);
+  }
+}
