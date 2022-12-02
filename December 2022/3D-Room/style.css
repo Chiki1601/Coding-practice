@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.room {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  display: grid;
+  place-items: center;
+  perspective: 100rem;
+  overflow: hidden;
+}
+
+.btn {
+  width: 15rem;
+  height: 15rem;
+  background-color: #eee;
+  color: rgb(252, 35, 7);
+  position: relative;
+  top: 10rem;
+  left: -40rem;
+  border-radius: 50% 50% 0 50%;
+  border: 0.3rem dashed rgb(252, 35, 7);
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.table {
+  width: 60rem;
+  height: 60rem;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.9),
+    rgba(38, 191, 230, 0.9)
+  );
+  border-radius: 50%;
+  border-bottom: 2rem solid rgb(153, 233, 253);
+  transform: rotateX(80deg) translateZ(10rem);
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 2s 1s;
+}
+
+.table.change {
+  transform: rotateX(80deg) translateY(30rem) translateZ(10rem);
+  transition: transform 2s;
+}
+
+.letter {
+  width: 15rem;
+  height: 25rem;
+  background-color: #fff;
+  padding: 2rem 1rem 2rem 1rem;
+  color: #555;
+  box-shadow: 0 0 0.1rem #aaa;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.5rem;
+  text-indent: 0.5rem;
+  transform-origin: bottom;
+  transition: transform 1s;
+}
+
+.change .letter {
+  transform: rotateX(-80deg);
+  transition: transform 1s 2s;
+}
+
+.table-leg {
+  width: 3rem;
+  height: 35rem;
+  background-color: rgba(29, 113, 116, 0.8);
+  position: absolute;
+  top: 30rem;
+  left: 28.5rem;
+}
+
+.table-leg-1 {
+  transform: rotateX(-60deg) rotateZ(40deg);
+  transform-origin: top;
+  border-radius: 5rem 1rem;
+  border-right: 0.3rem solid rgb(38, 85, 87);
+  border-bottom: 0.3rem solid rgb(38, 85, 87);
+}
+
+.table-leg-2 {
+  transform: rotateX(-60deg) rotateZ(-40deg);
+  transform-origin: top;
+  border-radius: 1rem 5rem;
+  border-left: 0.3rem solid rgb(38, 85, 87);
+  border-bottom: 0.3rem solid rgb(38, 85, 87);
+}
+
+.table-leg-3 {
+  transform: rotateX(-140deg);
+  transform-origin: top;
+  border-radius: 1rem;
+  border-left: 0.3rem solid rgb(38, 85, 87);
+  border-right: 0.3rem solid rgb(38, 85, 87);
+}
+
+.floor {
+  width: 160rem;
+  height: 160rem;
+  background-image: repeating-conic-gradient(
+    from 90deg,
+    #000 0deg 90deg,
+    #333 90deg 180deg
+  );
+  background-size: 10rem 10rem;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateZ(-23rem);
+  box-shadow: inset -5rem -5rem 10rem #000, inset 5rem 5rem 10rem #000;
+}
