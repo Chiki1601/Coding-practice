@@ -1,0 +1,277 @@
+* {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--hue: 223;
+	--bg: hsl(var(--hue),10%,90%);
+	--fg: hsl(var(--hue),10%,10%);
+	--primary: hsl(var(--hue),90%,55%);
+	--trans-dur: 1s;
+	font-size: calc(16px + (20 - 16) * (100vw - 320px) / (1280 - 320));
+}
+body,
+input {
+	font: 1em/1.5 sans-serif;
+}
+body {
+	background-color: var(--bg);
+	color: var(--fg);
+	height: 100vh;
+	display: grid;
+	overflow-x: hidden;
+	place-items: center;
+	transition:
+		background-color var(--trans-dur),
+		color var(--trans-dur);
+}
+
+.toggle {
+	font-size: 2em;
+	position: relative;
+}
+.toggle__input {
+	box-shadow: 0 0 0 0.125em hsla(var(--hue),90%,75%,0);
+	border-radius: 0.75em;
+	display: block;
+	position: relative;
+	width: 3em;
+	height: 1.5em;
+	-webkit-appearance: none;
+	appearance: none;
+	-webkit-tap-highlight-color: transparent;
+}
+.toggle__input:focus {
+	box-shadow: 0 0 0 0.125em hsla(var(--hue),90%,75%,1);
+	outline: transparent;
+}
+.toggle__input:before,
+.toggle__input:after {
+	background-color: hsl(0,0%,100%);
+	border-radius: 50%;
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0.25em;
+	width: 1em;
+	height: 1em;
+	z-index: 1;
+}
+.toggle__input:before {
+	animation: handleOffA var(--trans-dur);
+	left: 0.25em;
+}
+.toggle__input:after {
+	animation: handleOffB var(--trans-dur);
+	right: 0.25em;
+	transform: translateX(50vw);
+}
+.toggle__input:checked:before {
+	animation: handleOnA var(--trans-dur);
+	transform: translateX(-50vw);
+}
+.toggle__input:checked:after {
+	animation: handleOnB var(--trans-dur);
+	transform: translateX(0);
+}
+.toggle__stretch-left,
+.toggle__stretch-right {
+	pointer-events: none;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 50vw;
+	height: 100%;
+}
+.toggle__stretch-left {
+	right: 50%;
+}
+.toggle__stretch-right {
+	left: 50%;
+}
+.toggle__input,
+.toggle__stretch-left:before,
+.toggle__stretch-right:before {
+	background-color: hsl(var(--hue),10%,80%);
+	transition:
+		background-color calc(var(--trans-dur) * 0.2) calc(var(--trans-dur) * 0.4) ease-in-out,
+		box-shadow 0.15s ease-in-out;
+}
+.toggle__stretch-left:before,
+.toggle__stretch-right:before {
+	border-radius: 0.75em;
+	content: "";
+	display: block;
+	width: calc(100% + 1.5em);
+	height: 100%;
+}
+.toggle__stretch-left:before {
+	animation: stretchRightA var(--trans-dur);
+	transform: translateX(calc(100% - 3em));
+}
+.toggle__stretch-right:before {
+	animation: stretchRightB var(--trans-dur);
+	transform: translateX(calc(100% - 1.5em));
+}
+.toggle__input:checked,
+.toggle__input:checked ~ .toggle__stretch-left:before,
+.toggle__input:checked ~ .toggle__stretch-right:before {
+	background-color: var(--primary);
+}
+.toggle__input:checked ~ .toggle__stretch-left:before {
+	animation: stretchLeftA var(--trans-dur);
+}
+.toggle__input:checked ~ .toggle__stretch-right:before {
+	animation: stretchLeftB var(--trans-dur);
+	transform: translateX(calc(-100% + 1.5em));
+}
+.toggle--pristine .toggle__input:before,
+.toggle--pristine .toggle__input:after,
+.toggle--pristine .toggle__stretch-left:before,
+.toggle--pristine .toggle__stretch-right:before {
+	animation: none;
+}
+.toggle__sr {
+	clip: rect(1px,1px,1px,1px);
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+}
+
+/* `:focus-visible` support */
+@supports selector(:focus-visible) {
+	.toggle__input:focus {
+		box-shadow: 0 0 0 0.125em hsla(var(--hue),90%,75%,0);
+	}
+	.toggle__input:focus-visible {
+		box-shadow: 0 0 0 0.125em hsla(var(--hue),90%,75%,1);
+	}
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: hsl(var(--hue),10%,10%);
+		--fg: hsl(var(--hue),10%,90%);
+	}
+	.toggle__input,
+	.toggle__stretch-left:before,
+	.toggle__stretch-right:before {
+		background-color: hsl(var(--hue),10%,30%);
+	}
+}
+
+/* Animations */
+@keyframes handleOnA {
+	from {
+		animation-timing-function: ease-in;
+		transform: translateX(0);
+	}
+	20%,
+	to {
+		transform: translateX(-50vw);
+	}
+}
+@keyframes handleOnB {
+	from,
+	20% {
+		animation-timing-function: ease-out;
+		transform: translateX(50vw) scale(1);
+	}
+	40% {
+		animation-timing-function: ease-in;
+		transform: translateX(1.5em) scale(1);
+	}
+	50% {
+		animation-timing-function: ease-out;
+		transform: translateX(0.75em) scale(1.33);
+	}
+	60%,
+	to {
+		transform: translateX(0) scale(1);
+	}
+}
+@keyframes handleOffA {
+	from,
+	20% {
+		animation-timing-function: ease-out;
+		transform: translateX(-50vw) scale(1);
+	}
+	40% {
+		animation-timing-function: ease-in;
+		transform: translateX(-1.5em) scale(1);
+	}
+	50% {
+		animation-timing-function: ease-out;
+		transform: translateX(-0.75em) scale(1.33);
+	}
+	60%,
+	to {
+		transform: translateX(0) scale(1);
+	}
+}
+@keyframes handleOffB {
+	from {
+		animation-timing-function: ease-in;
+		transform: translateX(0);
+	}
+	20%,
+	to {
+		transform: translateX(50vw);
+	}
+}
+@keyframes stretchLeftA {
+	from,
+	to {
+		animation-timing-function: ease-in;
+		transform: translateX(calc(100% - 3em));
+	}
+	20%,
+	80% {
+		animation-timing-function: ease-out;
+		transform: translateX(-1.5em);
+	}
+}
+@keyframes stretchLeftB {
+	from,
+	20%,
+	80%,
+	to {
+		animation-timing-function: ease-out;
+		transform: translateX(calc(100% - 1.5em));
+	}
+	40%,
+	60% {
+		animation-timing-function: ease-in;
+		transform: translateX(1.5em);
+	}
+}
+@keyframes stretchRightA {
+	from,
+	20%,
+	80%,
+	to {
+		animation-timing-function: ease-out;
+		transform: translateX(-100%);
+	}
+	40%,
+	60% {
+		animation-timing-function: ease-in;
+		transform: translateX(-3em);
+	}
+}
+@keyframes stretchRightB {
+	from,
+	to {
+		animation-timing-function: ease-in;
+		transform: translateX(calc(-100% + 1.5em));
+	}
+	20%,
+	80% {
+		animation-timing-function: ease-out;
+		transform: translateX(0);
+	}
+}
