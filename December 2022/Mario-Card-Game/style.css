@@ -1,0 +1,500 @@
+/***********************************************************
+	MARIO CARD MATCHING GAME
+***********************************************************/
+
+/*----------------------------------
+	Properties
+----------------------------------*/
+
+
+/*----------------------------------
+	Mario Fonts
+----------------------------------*/
+@font-face {
+	font-family: flamante-round;
+	src: url("https://dl.dropboxusercontent.com/s/abri8pfqa4s537r/Flamante-Round-Medium-FFP.ttf?dl=0");
+}
+@font-face {
+	font-family: mario-font;
+	src: url("https://dl.dropboxusercontent.com/s/c7c7j86yaj11et9/SuperMario256.ttf?dl=0");
+}
+
+/*----------------------------------
+	Base Styles
+----------------------------------*/
+* {
+	box-sizing: border-box;
+}
+body {
+  align-items: center;
+  background: linear-gradient(gold, goldenrod);
+  background-attachment: fixed;
+  display: flex;
+  font-family: 'mario-font', sans-serif;
+  height: 100%;
+  justify-content: center;
+  margin: 0;
+  padding: 100px 0;
+	width: 100%;	
+	-moz-osx-font-smoothing: grayscale;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+}
+body:after {
+  background-attachment: fixed;
+  background-size: 50%;
+  background-image: url("https://dl.dropboxusercontent.com/s/m72v6oa7r5gu28o/Stamp_BG.jpg?dl=0");
+	background-repeat: repeat;
+  bottom: 0;
+	content: '';
+  height: calc(100% + 200px);
+  opacity: .3;
+	position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+
+/*----------------------------------
+	Game Container
+----------------------------------*/
+.game-container {
+	background-color: #efefef;
+	border: 1px solid #ccc;
+	padding: 60px 40px 40px;
+	margin: 0 auto;
+	z-index: 1;
+	border-radius: 10px;
+	position: relative;
+	margin-top: 60px;
+	width: 832px;
+}
+
+.game-container:after {
+	content: '';
+	position: absolute;
+	width: calc(100% - 40px);
+	height: calc(100% - 60px);
+	background-image: url("https://dl.dropboxusercontent.com/s/slmi7w3832mrut2/background-image.png?dl=0");
+	background-repeat: repeat;
+	z-index: 200;
+	top: 30px;
+	left: 20px;
+	border-radius: 5px;
+	background-size: 40%;
+	/* opacity: 0.5; */
+	border: 1px solid #aaa;
+}
+
+.cards {
+	margin: 20px auto 0;
+}
+
+
+
+/*----------------------------------
+	Card Styles
+----------------------------------*/
+.card {
+	height: 100px;
+	width: 100px;
+	margin-right: 25px;
+	margin-bottom: 50px;
+	position: relative;
+	border-radius: 5px;
+	overflow: hidden;
+	z-index: 1000;
+}
+
+.card-front, .card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: all .3s linear;
+	backface-visibility: hidden;
+}
+
+.card-front {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: rotateY(-180deg);
+	border-radius: 5px;
+	background-color: #ddd;
+	border: 4px solid #fff;
+	background: linear-gradient(#efefef, #ddd);
+}
+
+.card.match.red .card-front {
+	background-color: #F25F6A;
+	background: linear-gradient(#f58f96, #F25F6A);
+}
+
+.card.match.blue .card-front {
+	background-color: #47ACD6;
+	background: linear-gradient(#91cde6, #47ACD6);
+}
+
+.card-back {  
+	background-image: url("https://dl.dropboxusercontent.com/s/rbe2pz66h4lgrfn/questionbox.jpg?dl=0");
+	background-size: calc(100% + 14px);
+	background-repeat: no-repeat;
+	background-position: center;
+	transform: rotateY(0deg);
+	background-color: #F2D12F;
+	border-top: 2px solid #F2E031;
+	border-right: 2px solid #A8911E;
+	border-bottom: 2px solid #4B3906;
+}
+
+.card.reveal .card-front,
+.card.match .card-front {
+	transform: rotateY(0deg);
+}
+
+.card.match, .card.reveal {
+	pointer-events: none;
+}
+
+.card.reveal .card-back,
+.card.match .card-back  {
+	transform: rotateY(180deg);
+}
+
+.player1-turn .card:hover {
+	cursor: pointer;
+	outline: 5px solid #F25F6A;
+}
+
+.player2-turn .card:hover {
+	cursor: pointer;
+	outline: 5px solid #47ACD6;
+}
+
+/*----------------------------------
+	Card Images
+----------------------------------*/
+.card-image {
+	width: 65px;
+	height: 65px;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.card[data-card-type="fireflower"] .card-image {
+	background-image: url("https://dl.dropboxusercontent.com/s/r7eozl19e6g9bcp/fireflower.png?dl=0");
+}	
+.card[data-card-type="greenmushroom"] .card-image {
+	background-image: url("https://dl.dropboxusercontent.com/s/2qzy0m8anwmmi57/greenmushroom.png?dl=0");
+}
+.card[data-card-type="iceflower"] .card-image {
+	background-image: url("https://dl.dropboxusercontent.com/s/3837sx0vc98qjah/iceflower.png?dl=0");
+}
+.card[data-card-type="leaf"] .card-image{
+	background-image: url("https://dl.dropboxusercontent.com/s/evska2iureftuav/leaf.png?dl=0");
+}
+.card[data-card-type="mushroom"] .card-image{
+	background-image: url("https://dl.dropboxusercontent.com/s/i3au5lhrn17m5uy/mushroom.png?dl=0");
+}
+.card[data-card-type="silvercoin"] .card-image {
+	background-image: url("https://dl.dropboxusercontent.com/s/neorh13yrp6ubjj/silvercoin.png?dl=0");
+}
+.card[data-card-type="star"] .card-image {
+	background-image: url("https://dl.dropboxusercontent.com/s/0l7vn5ddg5tduv9/star.png?dl=0");
+}
+.card[data-card-type="yoshi"] .card-image {
+	background-image: url("https://dl.dropboxusercontent.com/s/fqfwlafnjselh1u/yoshi.png?dl=0");	
+}
+.card[data-card-type="yellowcoin"] .card-image {
+	background-image: url("https://dl.dropboxusercontent.com/s/y8qit6rqap12e4m/yellowcoin.png?dl=0");
+}
+
+/*----------------------------------
+	Game Header
+----------------------------------*/
+header.game-header {
+	width: calc(100% + 20px);
+	position: absolute;
+	top: -75px;
+	left: -10px;
+}
+
+.game-header section, footer.game-footer {
+	border: 1px solid #ccc;
+	background-color: #fff;
+	border-radius: 66px;
+	position: absolute;
+}
+
+.game-header section {
+	width: calc(50% - 100px);
+	background: linear-gradient(#fff 80%, #e5e5e5);
+	right: 0;
+}
+
+.game-header section:first-of-type {
+	left: 0;
+}
+
+.player1_profile,
+.player2_profile {
+	width: 95px;
+	height: 95px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 100%;
+	background-color: #fff;
+}
+.player1_profile img,
+.player2_profile img {
+	width: 75px;
+	border-radius: 100%;
+	border: 1px solid #ccc;
+	height: 75px;
+}
+
+.player2_profile{
+	float: right;
+}
+
+.player1_profile img {
+	background-color: #F25F6A;
+	background: linear-gradient(#f58f96, #F25F6A);
+}
+.player2_profile img {
+	background-color: #47ACD6;
+	background: linear-gradient(#91cde6, #47ACD6);
+}
+
+/*----------------------------------
+	Player Info
+----------------------------------*/
+.player1_profile + .info,
+.player2_profile + .info {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	width: calc(100% - 95px);
+	right: 0;
+	padding: 15px;
+}
+
+.player2_profile + .info { 
+	right: initial;
+	left: 0;
+}
+
+.player1_profile + .info h4, 
+.player2_profile + .info h4 {
+	text-shadow: 2px 2px #222;
+	font-size: 30px;
+	margin: 0;
+}
+
+.player1_profile + .info h3, 
+.player2_profile + .info h3 {
+	margin-top: 10px;
+	font-size: 23px;
+}
+
+.player1_profile + .info h4{ 
+	color: #ed2121;
+}
+.player2_profile + .info h4 {
+	color: #37b021;
+	text-align: right;
+}
+.player2_profile + .info h3 {
+	text-align: right;
+} 
+
+/*----------------------------------
+	Game Footer
+----------------------------------*/
+.game-footer {
+	width: 70%;
+	height: 84px;
+	background: linear-gradient(#fff 80%, #e5e5e5);
+	left: calc(70% / 4 - 20px);
+	padding: 14px 30px;
+	z-index: 300;
+	transform: scale(1);
+	bottom: -40px;
+	transition: all .2s linear;
+}
+
+.game-footer h2{
+	display: inline-block;
+	color: rgba(30, 30, 30, .6)
+}
+
+.game-container.endGame .game-footer {
+	transform: scale(0);
+	bottom: 0px;
+}
+
+.game-footer button {
+	position: absolute;
+	right: 30px;
+}
+
+/*----------------------------------
+	Buttons Styles
+----------------------------------*/
+button {
+	border: 2px solid #bee975;
+	color: #fff;
+	font-family: 'mario-font', sans-serif;
+	height: 55px;
+	padding: 0 40px;
+	border-radius: 20px;
+	border-bottom-width: 4px;
+	font-size: 17px;
+	text-shadow: -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333, 1px 1px 0 #333;
+	position: relative;
+	width: 150px;
+	background: radial-gradient(#67a236 80%, #4e8a26);
+	font-family: 'flamante-round', sans-serif;
+	font-weight: 900;
+	cursor: pointer;
+	transition: transform .05s linear;
+}
+
+button:focus {outline:0;}
+
+button span.hilight {
+	height: calc(50% + 2px);
+	background-color: #c1dd79;
+	width: calc(100% - 6px);
+	position: absolute;
+	left: 3px;
+	top: 2px;
+	border-radius: 30px;
+	background: linear-gradient(#d6e679 20%, #7cb13f);
+}
+
+button span.hilight:before {
+	content: '';
+	position: absolute;
+	background-color: #dcf597;
+	height: 7px;
+	width: 7px;
+	border-radius: 100%;
+	z-index: 10;
+	top: 2px;
+	left: 4px;
+}
+
+button span.text {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 19px;
+}
+
+button:hover {
+	transform: scale(1.07);
+}
+
+/*----------------------------------
+	Modal Styles
+----------------------------------*/
+
+.modal {
+	position: absolute;
+	background-color: #fff;
+	width: calc(100% - 80px);
+	height: calc(100% - 100px);
+	border-radius: 10px;
+	top: 45px;
+	z-index: 5000;
+	border: 1px solid #ddd;
+	border-bottom-width: 4px;
+	padding: 40px;
+	text-align: center;
+	transform: scale(0);
+	transition: transform .2s linear;
+	left: 40px;
+}
+
+.game-container.endGame .modal {
+	transform: scale(1);
+}
+
+.winnerColumn {
+	width: 33.333%;
+	display: inline-block;
+	float: left;
+}
+
+.winnerColumn .player1_profile,
+.winnerColumn .player2_profile {
+	width: 155px;
+	height: 155px;
+	display: inline-block;
+	border: 3px solid #333;
+}
+
+.results_container {
+	overflow: hidden;
+  height: 230px;
+}
+
+.results_container + .restartGame{
+	width: 200px;
+	margin: 60px auto 0;
+}
+
+h2.results {
+	margin-top: 0;
+	font-family: 'flamante-round', sans-serif;
+	color: #333;
+}
+
+h1.winnerName {
+	font-size: 60px;
+	margin: 0;
+	color: #ed2121;
+	text-shadow: 3px 3px #000;
+	margin-top: 35px;
+}
+
+.game-container.player2-wins .modal h1.winnerName{
+	color: #37b021;
+}
+
+.winnerColumn .bg-image {
+	width: 130px;
+	min-height: 130px;
+	background-size: cover;
+	border-radius: 50%;
+	background-color: #ddd;
+	position:relative;
+	border: 1px solid #333;
+}
+
+.winnerColumn .bg-image:before {
+	content: '';
+	width: 128px;
+	height: 128px;
+	border-radius: 50%;
+	position: absolute;
+	left: 0;
+	background-size: cover;
+	background-image: url("https://dl.dropboxusercontent.com/s/aprgildm7z5m14c/Mario-lose.png?dl=0");
+}
+
+.winnerColumn .player2_profile .bg-image:before {
+	background-image: url("https://dl.dropboxusercontent.com/s/hmjw6o5lp1wbmee/Luigi-lose.png?dl=0");
+}
+
+.game-container.player1-wins .modal .winnerColumn .player1_profile .bg-image:before {
+	background-image: url("https://dl.dropboxusercontent.com/s/gm5egu441rf1pya/Mario-win.png?dl=0");
+} 
+
+.game-container.player2-wins .modal .winnerColumn .player2_profile .bg-image:before {
+	background-image: url("https://dl.dropboxusercontent.com/s/ytcxnbgoweof0kv/Luigi-win.png?dl=0");
+}
