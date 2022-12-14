@@ -1,0 +1,12 @@
+body {
+  background-color: #202020;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  box-shadow: 5px 5px 50px #000;
+}
