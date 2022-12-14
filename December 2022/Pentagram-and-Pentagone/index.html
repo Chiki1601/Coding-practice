@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Construct regular pentagon/ pentagram</title>
+  <link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<svg viewBox="-2500 -2500 5000 5000">
+  <style>svg { --fs: 150px }</style>
+  <marker id="e" markerWidth="12.5" markerHeight="12.5" viewBox="0 -4 8 8" orient="auto" refX="7">
+    <path d="M8 0 0-4V4"></path>
+  </marker>
+  <g id="axes">
+    <path d="M-2375 0H2375"></path>
+    <text x="2300" y="-75">x</text>
+    <path d="M0-2375V2375"></path>
+    <text x="60" y="2375">y</text>
+  </g>
+  <circle id="cc" r="1781"></circle>
+  <g id="arc">
+    <path></path>
+    <text></text>
+  </g>
+  <line id="prev" x2="1781"></line>
+  <line id="curr" x2="1781"></line>
+  <path id="poly"></path>
+  <g id="points">
+    <g class="point">
+      <circle r="37.5"></circle>
+      <g class="lbl">
+        <text class="name" y="-15">V<tspan>0</tspan></text>
+        <text class="adeg" y="120">0·72°</text>
+      </g>
+    </g>
+    <g class="point">
+      <circle r="37.5"></circle>
+      <g class="lbl">
+        <text class="name" y="-15">V<tspan>1</tspan></text>
+        <text class="adeg" y="120">1·72°</text>
+      </g>
+    </g>
+    <g class="point">
+      <circle r="37.5"></circle>
+      <g class="lbl">
+        <text class="name" y="-15">V<tspan>2</tspan></text>
+        <text class="adeg" y="120">2·72°</text>
+      </g>
+    </g>
+    <g class="point">
+      <circle r="37.5"></circle>
+      <g class="lbl">
+        <text class="name" y="-15">V<tspan>3</tspan></text>
+        <text class="adeg" y="120">3·72°</text>
+      </g>
+    </g>
+    <g class="point">
+      <circle r="37.5"></circle>
+      <g class="lbl">
+        <text class="name" y="-15">V<tspan>4</tspan></text>
+        <text class="adeg" y="120">4·72°</text>
+      </g>
+    </g>
+  </g>
+</svg>
+<form>
+  <input id="conv" type="radio" name="poly" data-q="1"/>
+  <label for="conv">pentagon</label>
+  <input id="star" type="radio" name="poly" data-q="2"/>
+  <label for="star">pentagram</label>
+</form>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
