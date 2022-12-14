@@ -1,0 +1,21 @@
+body{
+	background:#303f62;
+	display:flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+
+.container{
+	width:100vw;
+	position:relative;
+	display:flex;
+	flex-wrap:wrap;
+	padding:50px;
+}
+
+.clickable{
+	width:142px; height:142px;
+	margin-bottom:60px;
+	margin-right:60px;
+	transform:rotate(45deg);
+}
