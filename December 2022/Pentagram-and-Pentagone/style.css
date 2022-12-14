@@ -1,0 +1,105 @@
+body {
+  display: flex;
+  overflow: hidden;
+  margin: 0;
+  height: 100vh;
+}
+
+svg {
+  flex: 1;
+  stroke-width: 8px;
+  font: var(--fs) consolas, monaco, monospace;
+  letter-spacing: calc(var(--fs)*-.05);
+}
+
+path {
+  fill: none;
+}
+
+line {
+  stroke: #b53;
+  stroke-width: 12px;
+}
+
+tspan {
+  font-size: 0.65em;
+}
+
+#e * {
+  fill: #262626;
+}
+
+#axes {
+  marker-end: url(#e);
+  font: italic 1em times new roman, serif;
+}
+#axes [d] {
+  stroke: #262626;
+}
+
+#cc {
+  fill: none;
+  stroke: #d9d9d9;
+}
+
+#arc [d] {
+  fill: #ffeb3b;
+  fill-opacity: 0.5;
+  stroke: #f90;
+}
+
+#curr {
+  stroke: #95a;
+}
+
+#poly {
+  stroke: #f90;
+  stroke-width: 16px;
+}
+
+#points {
+  text-anchor: middle;
+}
+
+.point [r] {
+  fill: #f90;
+  stroke: #262626;
+}
+
+.name {
+  font-style: italic;
+  font-family: times new roman, serif;
+  font-weight: 600;
+}
+
+form {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
+[type=radio] {
+  position: absolute;
+  left: -100vw;
+}
+[type=radio] + label {
+  display: inline-block;
+  margin-right: 0.5em;
+  border: solid 2px currentcolor;
+  padding: 0 0.5em;
+  opacity: 0.5;
+  font: 1.25em/2 trebuchet ms, tahoma, sans-serif;
+  cursor: pointer;
+  transition: 0.7s;
+}
+[type=radio] + label:hover {
+  opacity: 0.999;
+}
+[type=radio]:focus + label, [type=radio]:checked + label {
+  opacity: 0.999;
+}
+[type=radio]:checked + label {
+  background: #e68a00;
+  color: #fff;
+  border-color: #262626;
+}
