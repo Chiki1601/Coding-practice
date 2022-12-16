@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' opacity='0.1' viewBox='-50 -50 100 100'%3E%3Cdefs%3E%3Cpath id='dash' d='M 0 0 h 10' /%3E%3C/defs%3E%3Cg stroke='hsl(0, 0%25, 100%25)' fill='none' stroke-width='2' stroke-linecap='round'%3E%3Cg id='dashes'%3E%3Cuse transform='rotate(45) translate(30 0)' href='%23dash' /%3E%3Cuse transform='rotate(90) translate(45 0)' href='%23dash' /%3E%3Cuse transform='rotate(135) translate(30 0)' href='%23dash' /%3E%3Cuse transform='rotate(180) translate(45 0)' href='%23dash' /%3E%3C/g%3E%3Cuse href='%23dashes' transform='scale(-1 -1)' /%3E%3C/g%3E%3C/svg%3E"),
+		hsl(0, 0%, 12%);
+	background-size: 40px;
+	color: white;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: "Play", sans-serif;
+}
+
+body > * + * {
+	margin-top: 1.25rem;
+}
+
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+}
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+form label {
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+	margin: 0.5rem;
+}
+
+form label > * + * {
+	margin-bottom: 0.75rem;
+}
+
+form label svg {
+	width: 7rem;
+	height: 7rem;
+	filter: grayscale(1);
+}
+
+form label input:checked + svg {
+	filter: grayscale(0);
+}
+
+p {
+	font-size: 3rem;
+}
+
+button {
+	letter-spacing: 1px;
+	box-shadow: 0 0 0 2px currentColor;
+	border: none;
+	font-family: inherit;
+	color: inherit;
+	background: none;
+	padding: 0.75rem 0.75rem;
+	border-radius: 5px;
+	font-size: 1rem;
+	transition: box-shadow 0.2s ease-in-out;
+}
+
+button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+button:not(:disabled):hover {
+	box-shadow: 0 0 0 3px;
+}
+
+button:not(:disabled):focus {
+	outline: none;
+	box-shadow: 0 0 0 3px, 0 0 0 6px hsl(0, 0%, 15%), 0 0 0 9px;
+}
