@@ -1,0 +1,26 @@
+body {
+  overflow: hidden;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+svg {
+  overflow: visible;
+  width: 100%;
+}
+
+path {
+  opacity: 0;
+}
+
+p {
+  text-align: center;
+  padding: 0 20px;
+  position: fixed;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  font-family: "Varela Round", sans-serif;
+}
