@@ -1,0 +1,23 @@
+* {
+      padding: 0;
+      margin: 0;
+    }
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #00000c;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  color: #eee;
+  margin: 4px;
+  font-size: 1.5rem;
+  font-family: helvetica, sans-serif;
+}
+
+canvas {
+  display: block;
+}
