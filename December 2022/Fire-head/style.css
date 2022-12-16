@@ -1,0 +1,21 @@
+body{
+  background-color:#000;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.mainSVG{
+  width:80%;
+  height: 80%;
+  overflow: visible;
+}
