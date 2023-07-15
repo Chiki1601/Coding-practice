@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cross Stitch App</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@800&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="inputs">
+        <div class="inp-wrapper">
+          <label for="height-input">Height:</label>
+          <input type="number" id="height-input" min="1" max="20" value="10" />
+        </div>
+        <div class="inp-wrapper">
+          <label foir="width-input">Width:</label>
+          <input type="number" id="width-input" min="1" max="20" value="10" />
+        </div>
+        <div class="inp-wrwapper">
+          <label for="color-input">Color:</label>
+          <input type="color" id="color-input" value="#000000" />
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="create-grid">Create Grid</button>
+        <button id="save-button">Save Image</button>
+        <button id="clear-button">Clear</button>
+      </div>
+      <p id="err-message"></p>
+      <div class="container">
+        <div id="grid"></div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
